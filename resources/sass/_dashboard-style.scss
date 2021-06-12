@@ -1,0 +1,198 @@
+.heard-dashoboard {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+
+    .button-create {
+        display: flex;
+        text-align: end;
+
+        button {
+            margin: auto 0px;
+
+            &:hover {
+                background: #0086b3;
+                color: #fff;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.card-box {
+    .content-card {
+        display: flex;
+        margin: 5px 0px;
+        padding: 10px 5px 10px 0px;
+        border: 1px solid #e6e6e6;
+        border-radius: 10px;
+    }
+
+    .card-text {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        hr {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            width: 100px;
+            height: 1px;
+            color: grey;
+        }
+
+        .info-card {
+            padding-top: 10px;
+            flex-grow: 1;
+            width: 100%;
+
+            p {
+                margin: 0 0 0;
+                font-size: 12px;
+            }
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+
+            .btn {
+                border: 2px solid #343A40;
+
+            }
+
+            .edit:hover {
+                background: #fff;
+                color: #248f24;
+                border: 2px solid #248f24;
+                font-weight: 600;
+            }
+
+            .show:hover {
+                background: #fff;
+                color: #0059b3;
+                border: 2px solid #0059b3;
+                font-weight: 600;
+            }
+
+            .sponsor:hover {
+                background: gold;
+                color: #3d445a;
+                border: 2px solid gold;
+                font-weight: 600;
+            }
+
+            .delete:hover {
+                background: #b30000;
+                color: #fff;
+                border: 2px solid #b30000;
+                font-weight: 600;
+            }
+
+            @media screen and (max-width: 1024px) {
+                .edit {
+                    background: #fff;
+                    color: #248f24;
+                    border: 2px solid #248f24;
+                    font-weight: 600;
+                }
+
+                .show {
+                    background: #fff;
+                    color: #0059b3;
+                    border: 2px solid #0059b3;
+                    font-weight: 600;
+                }
+
+                .sponsor {
+                    background: gold;
+                    color: #3d445a;
+                    border: 2px solid gold;
+                    font-weight: 600;
+                }
+
+                .delete {
+                    background: #b30000;
+                    color: #fff;
+                    border: 2px solid #b30000;
+                    font-weight: 600;
+                }
+            }
+
+
+        }
+
+    }
+
+    .img-card {
+        width: 100%;
+        max-height: 350px;
+        padding: 0px 0px;
+        overflow: hidden;
+        border-radius: 10px;
+        margin: 0px 10px;
+        position: relative;
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .detais-views {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($color: #343A40, $alpha: .7);
+            top: 0;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            div {
+                height: 50px;
+                width: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: #343A40;
+                margin: 10px;
+                cursor: pointer;
+            }
+        }
+
+
+    }
+}
+
+.modal-dialog {
+    max-width: 1000px;
+}
+
+.modal-delete {
+    max-width: 500px;
+
+}
+
+.delete-modal:hover {
+    background: #b30000;
+    color: #fff;
+    font-weight: 600;
+}
+
+.modal {
+
+    .card-body {
+        border: 1px solid rgba(0, 0, 0, 0.125);
+    }
+}

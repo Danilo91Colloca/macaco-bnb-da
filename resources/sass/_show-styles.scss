@@ -1,0 +1,77 @@
+.bnb-show{
+    margin-bottom: 15px;
+    .row{
+        .box-info-bnb{
+            margin: 15px 0;
+        }
+    }
+
+   .box-image-map-bnb{
+        .images-bnb{
+            padding-left: 0;
+            @media screen and (max-width:992px){
+                padding: 0;
+            }
+                img{
+                    border: 1px solid #ccc;
+                    border-radius: 3px;
+                    max-height: 440px;
+                    object-fit: cover;
+                    background-color: #000;
+                }
+           }
+           .map-bnb{
+               width: 100%;
+               height: 440px;
+               border-radius: 3px;
+               @media screen and (max-width:992px){
+                margin-top: 5px;
+               }
+               @media screen and (max-width:767px){
+                height: 360px;
+               }
+               #map-div {
+                   width: 100%;
+                   height: 100%;
+                   border-radius: 8px;
+
+               }
+           }
+   }
+   .box-description-service-bnb{
+       .description{
+            padding-left: 0;
+            @media screen and (max-width:992px){
+                padding: 0;
+            }
+
+            ul{
+                padding-left: 0;
+            }
+       }
+        .box-desecription-bnb{
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #fff;
+            padding: 0 5px;
+            h5,p{
+                margin-left: 5px;
+            }
+        }
+        .box-service-bnb {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #fff;
+        }
+    }
+    .btn{
+        margin: 15px;
+        border: 1px solid #000;
+        background-color: $darkGrayFoot;
+        color: #fff;
+    }
+}
+
+
+
+

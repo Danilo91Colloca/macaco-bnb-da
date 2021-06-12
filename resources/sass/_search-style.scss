@@ -1,0 +1,277 @@
+//provvisorie e utilities da separare
+
+[v-cloak] {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.bnb-btn {
+    cursor: pointer;
+    color: $grey-font;
+
+    &:hover {
+        color: #000;
+    }
+}
+
+//fine provvisorie e utilities da separare
+.bnb-search {
+    .show-map-button {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        bottom: 67px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+        background-color: #00000081;
+        border-radius: 10px;
+        padding: 0px 10px;
+        &:hover {
+            transition: 2s;
+            background-color: #000;
+        }
+        @media screen and (max-width: 1199px) {
+            display: inline-block;
+        }
+    }
+    .search-bar {
+        padding-top: 15px;
+
+        .search-input {
+            height: fit-content;
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 75px;
+            padding: 5px 15px;
+
+            @media screen and (min-width: 576px) {
+                width: 100%;
+            }
+
+            @media screen and (min-width: 768px) {
+                width: fit-content;
+            }
+
+            i {
+                cursor: pointer;
+                font-size: 26px;
+            }
+
+            input {
+                border: none;
+                outline: none;
+                font-size: 26px;
+                width: calc(100% - 31px);
+
+
+                @media screen and (min-width: 768px) {
+                    width: 400px;
+                }
+
+                &::placeholder {
+                    text-align: center;
+                }
+            }
+        }
+
+        .drop-section.bnb-btn {
+            font-size: 36px;
+            margin-left: 15px;
+        }
+    }
+
+    .advanced-settings {
+        background-color: #eee;
+        height: 0;
+        overflow: hidden;
+        transition: height 1s;
+        z-index: -1;
+
+        &.active {
+            @media screen and (max-width: 576px) {
+                height: 1000px;
+            }
+
+            @media screen and (min-width: 576px) {
+                height: 1000px;
+            }
+
+            @media screen and (min-width: 768px) {
+                height: 590px;
+            }
+
+            @media screen and (min-width: 992px) {
+                height: 430px;
+            }
+        }
+
+        .container {
+            .row {
+                & > * {
+                    margin: 15px 0;
+                }
+
+                input {
+                    &[type="range"] {
+                        vertical-align: middle;
+                    }
+
+                    &[type="number"] {
+                        width: 50px;
+                    }
+                }
+
+                .lift-section.bnb-btn {
+                    font-size: 25px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .all-flats{
+        height: calc(100vh - 220px);
+        overflow: hidden;
+
+        .sponsored-flats{
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .searched-flats{
+            height: 100%;
+            overflow-y: auto;
+
+            &-left{
+                height: 100%;
+                overflow-y: auto;
+            }
+        }
+
+        .empty-search{
+            padding: 20px 0 200px;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 15px 0 15px 50px;
+        }
+
+        .flat {
+            overflow: hidden;
+
+            & a,
+            & a:link,
+            & a:visited,
+            & a:hover,
+            & a:active {
+                text-decoration: none;
+                color: #000;
+            }
+
+            @media screen and (min-width: 576px) {
+                height: fit-content;
+            }
+
+            @media screen and (min-width: 768px) {
+                height: 320px;
+            }
+
+            @media screen and (min-width: 992px) {
+                height: 270px;
+            }
+
+            .row {
+                height: 100%;
+                padding: 30px;
+                border-bottom: 1px solid #ccc;
+
+                .flat-img-box {
+                    height: 100%;
+                    position: relative;
+
+                    .bnb-flatSponsoredTag {
+                        height: fit-content;
+                        top: -1%;
+                        right: 1%;
+                        width: fit-content;
+                        position: absolute;
+                        background: #000;
+                        border-radius: 5px;
+                        padding: 5px;
+                        font-size: 12px;
+                        font-weight: bold;
+                        color: #fff;
+                    }
+
+                    a {
+                        img {
+                            border-radius: 15px;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .flat-info {
+                    position: relative;
+                    a {
+                        .flat-title {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                        .flat-text {
+                            font-size: 17px;
+                            color: $grey-font;
+                        }
+
+                        .flat-others-info {
+                            &-quantities {
+                                font-size: 18px;
+                                // margin: 15px;
+                            }
+
+                            .services{
+                                div{
+                                    margin: 0 10px 5px 0;
+                                    border: 1px solid #000;
+                                    border-radius: 15px;
+                                    text-align: center;
+                                    padding: 0 10px;
+                                }
+                            }
+
+                            &-price {
+                                font-size: 21px;
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bnb-mapCol {
+            padding: 0;
+            .bnb-map-container {
+                width: 100%;
+                height:100%;
+                position: sticky;
+                top: 0;
+                #map-div {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+}
+

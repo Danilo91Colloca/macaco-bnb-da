@@ -1,0 +1,38 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// fontawesome
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//header & footer style
+@import 'header-footer';
+
+//home
+@import 'home';
+
+//show-style
+@import 'show-styles';
+
+//import dello stile della dashboard utente
+@import 'dashboard-style';
+
+//import della ricerca appartamento
+
+@import 'search-style';
+
+//formCreateEdit-style
+@import 'formCreateEdit-style';
+
+//sponsor style
+@import 'sponsor-style';
+
+.disabled-payment{
+    pointer-events: none;
+    opacity: 0.5;
+}

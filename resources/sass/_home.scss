@@ -1,0 +1,256 @@
+//i mixin devono stare sempre in alto NON SPOSTARE
+@mixin bnb-flatsContainerParam{
+    background: linear-gradient(-45deg, #000000, #b9b9b9, #251a1a, #485351);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    margin-bottom: 20px;
+    width: 100vw;
+    max-width: 100%;
+    padding: 0px 10px 10px 10px;
+    min-width: 360px;
+}
+
+@mixin bnb-titleSectionParam {
+    color: #ffffff;
+    background: linear-gradient(to right, #000000,
+    #0000009a,
+    #00000060,
+    #00000050,
+    #00000000
+    );
+    padding-left: 35px;
+}
+@mixin carouselSidesParam {
+    background-color: #000000a8;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.bnb-jumbotron {
+    width: 100vw;
+    max-width: 100%;
+    min-width: 360px;
+    height: calc(100vh - 140px);
+    position: relative;
+    margin-bottom: 25px;
+    video {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -100;
+      }
+      .bnb-carousel {
+        position: absolute;
+        width: 100vw;
+        max-width: 100%;
+        height: 100%;
+        z-index: -150;
+        .bnb-carouselConteiner {
+            width: 100%;
+            height: 100%;
+        }
+      }
+    .bnb-jumboTextContainer {
+        background: linear-gradient(to right, #000000,
+        #0000009a,
+        #00000060,
+        #00000050,
+        #00000000
+        );
+        width: 100%;
+        height: 100%;
+        .bnb-textContent {
+            color: #ffffff;
+            padding: 35px;
+            @media screen and (max-width: 767px) {
+                padding-top: 130px;
+
+            }
+            @media screen and (max-width: 576px){
+                padding-top: 140px;
+            }
+            h1 {
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                margin-bottom: 50px;
+                @media screen and (max-width: 576px) {
+                    font-size: 38px;
+                }
+            }
+            p {
+                padding-left: 55px;
+                @media screen and (max-width: 576px) {
+                    font-size: 16px;
+                }
+            }
+            margin-bottom: 60px;
+        }
+        .bnb-buttonContainer {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0px;
+            a {
+                background-color: transparent;
+                color:#ffffffc2;
+                transition: 2s;
+                &:hover {
+                    transition: 2s;
+                    background-color: #00000077;
+                    transform: scale(1.2);
+                }
+
+                @media screen and (max-width: 767px){
+                    width: 100vw;
+                    max-width: 100%;
+                    text-align: center;
+                }
+                @media screen and (max-width: 576px) {
+                    width: calc(100vw - 10px);
+
+                }
+            }
+        }
+    } //end bnb-jumboTextContainer
+}//end jumbotron
+.bnb-flatsContainer {
+    @include bnb-flatsContainerParam;
+    .row {
+        max-width: 100%;
+        margin-bottom: 15px;
+        .container-fluid.bnb-titleSection{
+            @include bnb-titleSectionParam;
+         }
+    }
+
+    .bnb-cardBox {
+        height: 430px;
+        overflow-y: scroll;
+        padding-top: 15px;
+        .bnb-card {
+            position: relative;
+            margin-right: 20px;
+            width: 300px;
+            height: 400px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            background-color: #fff;
+            .bnb-imgContainer {
+                padding: 15px;
+                width: 100%;
+                height: 350px;
+                .bnb-imgCard {
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border: 1px solid #1f022225;
+                }
+            }
+            .bnb-flatTitleStrip {
+                background-color: #000000bd;
+                top: 0;
+                right: 0;
+                width: 100%;
+                padding: 5px;
+                border-radius: 5px;
+                position: absolute;
+                overflow: hidden;
+                .bnb-cardTitle {
+                    height: 35px;
+                    font-size: 16px;
+                    color: #fff;
+                }
+            }//end .bnb-flatTitleStrip
+            .bnb-buttonContainer {
+                position: absolute;
+                bottom: 2%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80%;
+                text-align: center;
+                .bnb-button {
+                    margin: 0 auto;
+                }
+            }
+        }//end bnb-cardContent
+    } //end bnb-cardContainer
+}//end bnb-flatsContainer
+
+.bnb-jumboMain {
+    margin-bottom: 20px;
+    a{
+        color: #000000;
+        text-decoration: none;
+    }
+}
+
+/*>>>>>>>>carousel <<<<<<*/
+div.carousel.slide.bnb-slide {
+    background-color: #7a7a7a9d;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    .carousel-inner{
+        .bnb-buttonContainer {
+            .bnb-buttonContent {
+                a {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 100;
+
+                    background-color: #00000065;
+                    color: #fff;
+                    transition: 2s;
+                    &:hover {
+                        transition: 2s;
+                        border-radius: 20px;
+                        background-color: #000000;
+                    }
+                }
+            }
+
+        }
+        .carousel-item {
+            width: 100% ;
+            height: calc(100vh - 95px);
+            img {
+                object-fit:cover;
+                object-position: center;
+                -o-object-fit: cover;
+                -o-object-position: center;
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+        .bnb-carouselIndicators{
+            position: absolute;
+        }
+    }
+    a.carousel-control-prev.bnb-carouselInd {
+        @include carouselSidesParam;
+    }
+    a.carousel-control-next.bnb-carouselInd {
+      @include carouselSidesParam;
+    }
+
+}
+
+
+
